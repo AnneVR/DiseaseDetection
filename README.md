@@ -1,5 +1,5 @@
 # DiseaseDetection
-![](https://img.shields.io/github/license/pandao/editor.m..)
+![](https://img.shields.io/github/license/pandao/editor.md.svg)
 # About
 This project containing a convolutional neural network that is capable to predict breast cancer in breast histology images and pneumonia in lungs x-rays. It was based on a simplified VGGNet model with 3 convolutional layers. The project includes a trained model and prediction function.
 
