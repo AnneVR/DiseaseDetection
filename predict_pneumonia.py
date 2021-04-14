@@ -19,6 +19,7 @@ def predict_image(imagePaths):
     image = img_to_array(image)
     image = np.expand_dims(image, axis=0)
 
+    # make predictions on the input image
     pred = model.predict(image)
     
     i = pred.argmax(axis=1)[0]

@@ -1,10 +1,17 @@
+# import the necessary packages
 from keras.preprocessing.image import img_to_array
 from keras.models import load_model
+import matplotlib.pyplot as plt
+from imutils import build_montages
+from imutils import paths
 import numpy as np
+import argparse
+import random
 import cv2
 
 
 def predict_image(imagePaths):
+    # load the pre-trained network
     print("[INFO] loading pre-trained network...")
     model = load_model("cancer.model")
 
@@ -33,6 +40,7 @@ def predict_image(imagePaths):
     orig = cv2.resize(orig, (600, 600))
     cv2.putText(orig, text, (20, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, color, 3)
 
+    # add the output image to our list of resultss
     results.append(orig)
 
     print("[INFO] Showing the image")
